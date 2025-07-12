@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -24,7 +24,7 @@ public enum ReadType : byte
 
 public abstract class FPropertyTagType<T> : FPropertyTagType
 {
-    public T? Value { get; internal set; }
+    public T? Value { get; set; }
 
     public override object? GenericValue => Value;
 

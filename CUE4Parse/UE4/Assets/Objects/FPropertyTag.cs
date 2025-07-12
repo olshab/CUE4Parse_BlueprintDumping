@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using CUE4Parse.MappingsProvider;
 using CUE4Parse.UE4.Assets.Objects.Properties;
@@ -98,6 +98,8 @@ public class FPropertyTag
     /// ArrayIndex > 0 is used as a fallback for UE4 games but in this case IsIndexed will be false on the first element of the array
     /// </summary>
     public bool IsIndexed => PropertyTagFlags.HasFlag(EPropertyTagFlags.HasArrayIndex) || ArrayIndex > 0;
+
+    public FPropertyTag() { }
 
     public FPropertyTag(FAssetArchive Ar, PropertyInfo info, ReadType type)
     {
